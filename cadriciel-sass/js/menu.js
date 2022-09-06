@@ -21,7 +21,11 @@ let menu = {
     //********** Création du bouton du menu mobile
 
     // On crée VIRTUELLEMENT un bouton et un span (pour le texte du bouton)
+    this.refNav.setAttribute("aria-label", "Menu principal");
     this.refButton = document.createElement('button');
+    this.refButton.setAttribute("aria-expanded", false);
+    this.refButton.setAttribute("aria-haspopup", "menu");
+    this.refButton.setAttribute("aria-controls", "navList");
     this.refSpan = document.createElement('span');
 
     // On ajoute le span dans le bouton
@@ -56,6 +60,8 @@ let menu = {
       this.refSpan.innerHTML = this.strNavClosed;
     } else {
       this.refSpan.innerHTML = this.strNavOpen;
+      this.refButton.removeAttribute("aria-expanded");
+      this.refButton.setAttribute("aria-expanded", true);
     }
   }
 };

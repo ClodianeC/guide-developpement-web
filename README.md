@@ -1,7 +1,7 @@
 # Guide de développement Web
 Ensemble de règles et bonnes pratiques de développement Web
 
-[Cadriciel-SASS](cadriciel-sass/index.html)
+[Cadriciel-SASS](cadriciel-sass/)
 
 [Guide HTML](guide-html.md)    
 [Guide CSS](guide-css.md)  
